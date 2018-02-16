@@ -1,6 +1,6 @@
 import Lane from '../models/lane';
 import uuid from 'uuid';
-import Note from '../models/note';
+// import Note from '../models/note';
 
 export function getSomething(req, res) {
   return res.status(200).end();
@@ -45,7 +45,7 @@ export function deleteLane(req, res) {
 }
 
 export function editLaneName(req, res) {
-  Lane.update({ id: req.params.laneId }, req.body.lane.name).exec((err, lane) => {
+  Lane.update({ id: req.params.laneId }, req.body.lane).exec((err, lane) => {
     if (err) {
       res.status(500).send(err);
     }
