@@ -45,7 +45,8 @@ export function deleteLane(req, res) {
 }
 
 export function editLaneName(req, res) {
-  Lane.update({ id: req.params.laneId }, req.body.lane).exec((err, lane) => {
+  Lane.update({ id: req.params.laneId }, { name: req.body.name }).exec((err, lane) => {
+ // console.log('lane ' + req.body.name);
     if (err) {
       res.status(500).send(err);
     }

@@ -1,1 +1,16 @@
 /* Lane styles */
+.Lane {
+    color: greenyellow;
+}
+.LaneHeader {
+    color: greenyellow;
+}
+.LaneAddNote {
+    color: greenyellow;
+}
+.LaneName {
+    color: blueviolet;
+}
+.LaneDelete {
+    color: red;
+}
