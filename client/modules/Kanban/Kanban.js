@@ -2,17 +2,22 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Lanes from '../Lane/Lanes';
-// import styles from '../Lane/Lane.css';
+import { DragDropContext } from 'react-dnd';
+import HTML5Backend from 'react-dnd-html5-backend';
+import { compose } from 'redux';
+import styles from '../Lane/Lane.css';
 import { createLaneRequest, fetchLanes } from '../Lane/LaneActions';
 // import zmieniłem
 const Kanban = (props) => (
-  <div>
-    <button
-      className="lolo"
-      onClick={() => props.createLaneRequest({
-        name: 'New lane',
-      })}
-    >Add lane</button>
+  <div className={styles.Kanban}>
+    <div className={styles.NewLaneDiv}>
+      <button
+        className={styles.NewLaneButton}
+        onClick={() => props.createLaneRequest({
+          name: 'New lane',
+        })}
+      >Add lane</button>
+    </div>
     <Lanes lanes={props.lanes} />
   </div>
 );
@@ -36,4 +41,7 @@ const mapDispatchToProps = {
   createLaneRequest,
 };
 // tu podmieniłem createLane na createLaneRequest
-export default connect(mapStateToProps, mapDispatchToProps)(Kanban);
+export default compose(
+  connect(mapStateToProps, mapDispatchToProps),
+  DragDropContext(HTML5Backend)
+)(Kanban);

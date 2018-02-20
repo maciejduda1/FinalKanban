@@ -1,16 +1,35 @@
 /* Lane styles */
+.Kanban {
+    background-color: rgba(48, 117, 57, 0.719);
+}
 .Lane {
     color: greenyellow;
 }
 .LaneHeader {
-    color: greenyellow;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
-.LaneAddNote {
-    color: greenyellow;
-}
+
 .LaneName {
     color: blueviolet;
 }
-.LaneDelete {
-    color: red;
+
+.Lanes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-top: 3%;
+    align-items: flex-start;
+}
+.NewLaneButton, .LaneDelete>button,  .LaneAddNote>button {
+    border-radius: 50%;
+    text-align: center;
+    padding: 5px;
+}
+.NewLaneDiv {
+    display: flex;
+    justify-content: space-around;
 }

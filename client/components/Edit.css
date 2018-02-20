@@ -1,9 +1,18 @@
 .delete {
-    color: brown;
+    color: black;
+    font-size: 16px;
+    border-radius: 50%;
+    padding: 2px 15px;
 }
 .value {
-    color: aqua;
+    color: rgba(143, 233, 233, 0.733);
 }
 .edition {
     color: black;
+}
+.NoteEdit>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }

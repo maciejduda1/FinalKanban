@@ -1,4 +1,8 @@
 /* Note styles */
 .Note {
     color: blueviolet;
+    list-style-type: none;
+    background: rgba(88, 88, 10, 0.849);
+    text-align: center;
+    margin: 3%;
 }
