@@ -19,8 +19,8 @@ const noteTarget = {
         noteId,
         sourceLaneId,
       );
-    } */
-   
+    }
+   */
     if (targetProps.lane.id !== sourceLaneId) {
       targetProps.moveBetweenLanes(
         targetProps.lane.id,

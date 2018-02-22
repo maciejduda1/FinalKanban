@@ -11,5 +11,8 @@ router.route('/notes/:noteId').delete(NoteController.deleteNote);
 
 // Edit a Note
 router.route('/notes/:noteId').put(NoteController.editNote);
-
+/*
+// Move a Note
+router.route('/notes/move/:noteId').put(NoteController.moveNotesWithinLane);
+*/
 export default router;

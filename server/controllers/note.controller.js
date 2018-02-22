@@ -65,3 +65,31 @@ export function editNote(req, res) {
     res.json({ note });
   });
 }
+
+/*
+export function moveNotesWithinLane(req, res) {
+  Lane.findOne({ id: req.body.laneId })
+    .then(lane => {
+      const targetNoteIdIndex = lane.notes.indexOf({ id: req.params.noteId });
+      const sourceNoteIdIndex = lane.notes.indexOf({ id: req.body.sourceId });
+      console.log('targetNoteId ', targetNoteIdIndex);
+      console.log('sourceNoteId ', sourceNoteIdIndex);
+      lane.splice(targetNoteIdIndex, 0, lane.splice(sourceNoteIdIndex, 1)[0]);
+      return lane.save();
+    })
+    .then(() => {
+      res.status(200).end();
+    });
+}
+
+
+
+function moveNotes(array, sourceNoteId, targetNoteId) {
+  const sourceIndex = array.indexOf(sourceNoteId);
+  const targetIndex = array.indexOf(targetNoteId);
+  const arrayCopy = [...array];
+ 
+  arrayCopy.splice(targetIndex, 0, arrayCopy.splice(sourceIndex, 1)[0]);
+  return arrayCopy;
+}
+*/

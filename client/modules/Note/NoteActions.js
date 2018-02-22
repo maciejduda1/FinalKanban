@@ -70,3 +70,12 @@ export function moveWithinLane(laneId, targetId, sourceId) {
     sourceId,
   };
 }
+/*
+export function moveWithinLaneRequest(laneId, targetId, sourceId) {
+  return (dispatch) => {
+    return callApi(`notes/move/${targetId}`, 'put', { laneId, sourceId }).then(() => {
+      dispatch(moveWithinLane(laneId, targetId, sourceId));
+    });
+  };
+}
+*/
